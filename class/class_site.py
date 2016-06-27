@@ -1,4 +1,3 @@
-#import logging
 # -*- coding: utf-8 -*-
 
 from generic import *
@@ -14,9 +13,7 @@ class Site:
         try:
             show_pass("Open site", self.print_attr)
             br.open(parUrl['main_site'])
-            print parUrl['main_site']
         except Exception, e:
-            #logging.exception(e)
             add_error("CRITICAL: Cannot open page => %s" % repr(e))
 
     def input_name(self, parValue):
@@ -79,6 +76,6 @@ class Site:
     def verify_message(self):
         try:
             show_pass("Verify message", self.print_attr)
-            compare(text_id(self.response, 'lblresposta'), 'Testando - Quality Assuranc')
+            compare(text_id(self.response, 'lblresposta'), 'Testando - Quality Assurance')
         except Exception, e:
             add_error("CRITICAL: Cannot verify message => %s" % repr(e))
