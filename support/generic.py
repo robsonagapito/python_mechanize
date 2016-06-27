@@ -17,7 +17,7 @@ def show_pass(text,vimp = False):
         print "  => " + text
 
 def htmlParse(data, element, attr, attr_name):
-    soup = BeautifulSoup(data)
+    soup = BeautifulSoup(data, "lxml")
     if (attr != ''):
         result = soup.findAll(element, attrs={attr: attr_name})
     else:
@@ -34,9 +34,18 @@ def print_screen(vtext, vimp = False):
         print vtext
 
 def return_element_string(data, element, attr, attr_name):
-    soup = BeautifulSoup(data)
+    soup = BeautifulSoup(data, "lxml")
     result = soup.findAll(element, attrs={attr : attr_name})
     res = result[0].string
     res = res.strip()
     return res.decode("utf8")
+
+def text_id(data, element):
+    soup = BeautifulSoup(data, "lxml")
+    text_res = soup.find(id = element)
+    return text_res.text
+
+def compare(value1, value2):
+    if (value1 != value2):
+        add_error("CRITICAL: Different values => <" + value1 + "> and <"+ value2 + ">" )
 

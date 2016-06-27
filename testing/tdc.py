@@ -32,13 +32,18 @@ def __run__(params):
 
     username = 'mfsys2'
     password = 'LK5hv@4KUY'
-    url = { 'main_site': 'file:///Users/robson/workspace/tdc_trilha_python_2016/html/index.html'}
+    url = { 'main_site': 'file://' + sys.path[3] +'/index.html'}
     site = Site(imprimirTela)
   
     try:
         site.open_site(url)
         site.input_name('Robson')
-        site.choice_genre('male')
+        site.choice_gender('male')
+        site.click_bike()
+        site.input_user_name('Robson Agapito')
+        site.input_age('18')
+        site.click_send()
+        site.verify_message()
     except Exception, e:
         add_error("CRITICAL: %s" % repr(e))
 
