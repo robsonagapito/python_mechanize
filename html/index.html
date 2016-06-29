@@ -2,14 +2,14 @@
 <html lang="pt-br">
   <head>
     <meta charset="Content-Type: text/html; charset=UTF-8">
-    <title>Locaweb - QA</title>
+    <title>Bold / UOL-PagSeguro - QA</title>
   </head>
   <body>
-    <form name="form1" method="post">    
+    <form name="form1" method="post" action="cadastro_ok.html">    
       <div id="um" style="border:1px solid black; position:absolute; width:auto; height:auto; float:left;">
         <img src="uolbold.jpg" height="241px" width="461px">
       </div>
-      <div id="dois" style="border:1px solid black; position:absolute; margin-left: 462px; width:338px ;height:404px;">
+      <div id="dois" style="border:1px solid black; position:absolute; margin-left: 462px; width:338px ;height: 480px;">
         <div id="doisum" style="margin-left:10px; margin-top: 40px;"> 
 
           <p id=lblnome> Nome: <input type="text" id="nome" name="firstname" style= "width:20em" onfocus="alteraLabel(0)"> 
@@ -27,8 +27,8 @@
           <p id=lbldate> Idade: <input type="number" id="idade" name="idade" style= "width:3em" maxlength=3 onfocus="alteraLabel(0)">
           </p>
           </br>
-          <input type="button" id="but_enviar" value="Enviar" onclick="alteraTexto()">
-
+          <!--input type="button" id="salvar" name="salvar" value="Salvar" onclick="alteraTexto()"-->        
+          <button type="submit" name="ok">Ok</button>
         </div>
         <div id="doisresposta" style="border:2px solid black; margin-top:27px;"  text-align="center">
           <p id="lblresposta" align="center" style="color:black;">Testando - Quality Assurance</p>

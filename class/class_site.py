@@ -65,17 +65,32 @@ class Site:
         except Exception, e:
             add_error("CRITICAL: Cannot input age => %s" % repr(e))
 
-    def click_send(self):
-        try:
-            show_pass("Click send", self.print_attr)
-            br.submit()
-            self.response = br.response().read()
-        except Exception, e:
-            add_error("CRITICAL: Cannot click send => %s" % repr(e))
+    # def click_save(self):
+    #     try:
+    #         show_pass("Click save", self.print_attr)
+    #         br.select_form('form1')
+    #         self.reponse = br.submit()          
+    #     except Exception, e:
+    #         add_error("CRITICAL: Cannot click send => %s" % repr(e))
 
-    def verify_message(self):
+    def click_ok(self):
         try:
-            show_pass("Verify message", self.print_attr)
-            compare(text_id(self.response, 'lblresposta'), 'Testando - Quality Assurance')
+            show_pass("Click OK", self.print_attr)
+            br.select_form('form1')
+            br.submit()
         except Exception, e:
-            add_error("CRITICAL: Cannot verify message => %s" % repr(e))
+            add_error("CRITICAL: Cannot click OK => %s" % repr(e))
+
+    # def verify_message_save(self, parValue):
+    #     try:
+    #         show_pass("Verify message Save", self.print_attr)
+    #         compare(text_id(self.response, 'lblresposta'), parValue)
+    #     except Exception, e:
+    #         add_error("CRITICAL: Cannot verify message => %s" % repr(e))
+
+    def verify_message_ok(self, parValue):
+        try:
+            show_pass("Verify message Ok", self.print_attr)
+            compare(text_id(br.response().read(), 'body'), parValue)
+        except Exception, e:
+            add_error("CRITICAL: Cannot verify message => %s" % repr(e))            

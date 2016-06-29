@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 br = mechanize.Browser()
 br.set_handle_robots(False)
 array_error = []
+imprimirTela = True
 
 def add_error(text):
     array_error.append(text)    
@@ -48,4 +49,16 @@ def text_id(data, element):
 def compare(value1, value2):
     if (value1 != value2):
         add_error("CRITICAL: Different values => <" + value1 + "> and <"+ value2 + ">" )
+    else:
+         print_screen ("    ==>> " + value1 + " = " + value2 + " <<==", imprimirTela)
+
+def print_result(array_error):
+    if len(array_error) > 0:
+        print ""
+        print_screen ("ERROR: " + array_error[0], imprimirTela)
+        return [2,array_error[0]]
+    else:
+        print ""
+        print_screen ("  ** MONITORACAO PASSOU COM SUCESSO! **",imprimirTela)
+
 

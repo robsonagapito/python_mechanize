@@ -16,7 +16,6 @@ sys.path.insert(3, vpath + '/../html')
 
 from generic import *
 from class_site import *
-from class_checkout import *
 
 try:
     from bs4 import BeautifulSoup
@@ -25,16 +24,9 @@ except ImportError, e:
 
 socket.setdefaulttimeout(30)
 
-imprimirTela = True
-
 def __run__(params):
-
-
-    username = 'mfsys2'
-    password = 'LK5hv@4KUY'
     url = { 'main_site': 'file://' + sys.path[3] +'/index.html'}
     site = Site(imprimirTela)
-  
     try:
         site.open_site(url)
         site.input_name('Robson')
@@ -42,18 +34,12 @@ def __run__(params):
         site.click_bike()
         site.input_user_name('Robson Agapito')
         site.input_age('18')
-        site.click_send()
-        site.verify_message()
+        site.click_ok()
+        site.verify_message_ok('Cadastro realizado com sucesso!')
     except Exception, e:
         add_error("CRITICAL: %s" % repr(e))
+    print_result(array_error)    
 
-    if len(array_error) > 0:
-        print_screen ("ERROR: " + array_error[0], imprimirTela)
-        return [2,array_error[0]]
-    else:
-        print_screen ("MONITORACAO PASSOU COM SUCESSO!",imprimirTela)
-    
-
+print ""
 ret = __run__('s')
-
-print ret
+print ""
