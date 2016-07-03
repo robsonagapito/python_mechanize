@@ -11,6 +11,7 @@ class CadastroOk(object):
     def message_ok(self,response):
         try:
             show_pass("Message Ok", self.print_attr)
-            text_id(response, 'body')
+            ret = text_id(response, 'body')
+            return ret;
         except Exception, e:
             add_error("CRITICAL: Cannot verify message => %s" % repr(e))

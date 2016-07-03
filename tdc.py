@@ -35,6 +35,7 @@ def __run__(params):
     site.input_age('18')
     ret = site.click_ok()
     message = cadastrook.message_ok(ret)
+    compare(message, "Cadastro realizado com sucesso!")
     #finalization
     print_result(array_error)    
 
