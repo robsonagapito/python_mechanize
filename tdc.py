@@ -18,10 +18,10 @@ def __run__(params):
     cadastrook = CadastroOk(pscreen)
     #execution
     site.open_site(url)
-    site.input_name('Robson')
+    site.input_name('Robson Agapito')
     site.choice_gender('male')
     site.click_bike()
-    site.input_user_name('Robson Agapito')
+    site.input_user_name('robsonagapito')
     site.input_age('18')
     ret = site.click_ok()
     message = cadastrook.message_ok(ret)
