@@ -1,10 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import time
-import mechanize
-import types
-from bs4 import BeautifulSoup
 
+import mechanize
+from bs4 import BeautifulSoup
+import socket
+
+socket.setdefaulttimeout(30)
 br = mechanize.Browser()
 br.set_handle_robots(False)
 array_error = []

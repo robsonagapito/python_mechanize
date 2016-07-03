@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import socket
-import time
 import os
-import logging
 import sys
 
 vpath = os.path.abspath(".")
@@ -13,13 +10,6 @@ sys.path.insert(1, vpath + '/html')
 from support.generic import *
 from classes.newsite import *
 from classes.cadastrook import *
-
-try:
-    from bs4 import BeautifulSoup
-except ImportError, e:
-    raise(e)
-
-socket.setdefaulttimeout(30)
 
 def __run__(params):
     #prepare
