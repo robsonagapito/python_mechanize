@@ -1,5 +1,5 @@
 # PYTHON WITH MECHANIZE
-Apresentation of TDC SP - Trilha Python
+Presentation of TDC SP - Trilha Python
 
 How to use library mechanize with python.
 
