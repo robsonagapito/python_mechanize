@@ -18,11 +18,6 @@ How to use library mechanize with python.
 	wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
 - Run install: sudo python setup.py install
 
-## PyExecJS
-- Download PyExecJS: PyExecJS-1.4.0.zip
-- Unpack
-- Run install: sudo python setup.py install
-
 ## lxml
 - Install lxml: pip install lxml
 
@@ -34,4 +29,5 @@ How to use library mechanize with python.
 - http://toddhayton.com/2014/12/08/form-handling-with-mechanize-and-beautifulsoup/
 - https://pypi.python.org/pypi/mechanize/
 - http://www.crummy.com/software/BeautifulSoup/
-- https://pypi.python.org/pypi/PyExecJS
+- http://lxml.de/
+- https://pypi.python.org/pypi/setuptools
