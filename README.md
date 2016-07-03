@@ -21,3 +21,6 @@ sudo python setup.py install
 
 pip install lxml
 
+#br.form.action="the wanted action"
+#http://toddhayton.com/2014/12/08/form-handling-with-mechanize-and-beautifulsoup/
+

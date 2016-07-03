@@ -5,15 +5,13 @@ from support.generic import *
 
 class NewSite(object):
 
-	print "entrou cadasto site"
-
 	def __init__(self, vimprime):
 		self.print_attr = vimprime
 
 	def open_site( self, parUrl ):
 		try:
 			show_pass("Open site", self.print_attr)
-			self.resp = br.open(parUrl['main_site'])
+			br.open(parUrl['main_site'])
 		except Exception, e:
 			add_error("CRITICAL: Cannot open page => %s" % repr(e))
 

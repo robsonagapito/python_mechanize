@@ -10,8 +10,6 @@ br.set_handle_robots(False)
 array_error = []
 imprimirTela = True
 
-print "entrou cadasto generic"
-
 def add_error(text):
     array_error.append(text)    
 
@@ -63,11 +61,6 @@ def print_result(array_error):
     else:
         print ""
         print_screen ("  ** MONITORACAO PASSOU COM SUCESSO! **",imprimirTela)
-
-
-
-#br.form.action="the wanted action"
-#http://toddhayton.com/2014/12/08/form-handling-with-mechanize-and-beautifulsoup/
 
 
 

@@ -5,8 +5,6 @@ from support.generic import *
 
 class CadastroOk(object):
 
-    print "entrou cadasto ok"
-
     def __init__(self, vimprime):
         self.print_attr = vimprime
 
