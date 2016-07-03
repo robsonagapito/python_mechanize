@@ -1,26 +1,37 @@
-# python_mechanize
+# PYTHON WITH MECHANIZE
 Apresentation of TDC SP - Trilha Python
 
-Baixar mechanize-0.2.5.tar.gz
-executar sudo python setup.py install
+How to use library mechanize with python.
 
-Baixei o setuptools
-wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+## Mechanize
+- Download mechanize-0.2.5.tar.gz
+- Unpack
+- Run install: sudo python setup.py install
 
-Go to the Beautiful Soup web site, http://www.crummy.com/software/BeautifulSoup/
-Download the package beautifulsoup4-4.4.1.tar.gz
-Unpack it
-In a Terminal window, cd to the resulting directory
+## Beautiful Soup
+- Download Beautiful Soup: beautifulsoup4-4.4.1.tar.gz
+- Unpack
+- Run install: sudo python setup.py install
 
-Type sudo python setup.py install
+## Setup Tools
+- Download setup tools:
+	wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+- Run install: sudo python setup.py install
 
+## PyExecJS
+- Download PyExecJS: PyExecJS-1.4.0.zip
+- Unpack
+- Run install: sudo python setup.py install
 
-https://pypi.python.org/pypi/PyExecJS
-PyExecJS-1.4.0.zip
-sudo python setup.py install
+## lxml
+- Install lxml: pip install lxml
 
-pip install lxml
+## Project
+- Clone project
+- Run: python tdc.py
 
-#br.form.action="the wanted action"
-#http://toddhayton.com/2014/12/08/form-handling-with-mechanize-and-beautifulsoup/
-
+## Links
+- http://toddhayton.com/2014/12/08/form-handling-with-mechanize-and-beautifulsoup/
+- https://pypi.python.org/pypi/mechanize/
+- http://www.crummy.com/software/BeautifulSoup/
+- https://pypi.python.org/pypi/PyExecJS
