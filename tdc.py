@@ -14,8 +14,8 @@ from classes.cadastrook import *
 def __run__(params):
     #prepare
     url = { 'main_site': 'file://' + sys.path[1] +'/index.html'}
-    site = NewSite(imprimirTela)
-    cadastrook = CadastroOk(imprimirTela)
+    site = NewSite(pscreen)
+    cadastrook = CadastroOk(pscreen)
     #execution
     site.open_site(url)
     site.input_name('Robson')

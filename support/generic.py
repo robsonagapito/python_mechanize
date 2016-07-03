@@ -9,7 +9,7 @@ socket.setdefaulttimeout(30)
 br = mechanize.Browser()
 br.set_handle_robots(False)
 array_error = []
-imprimirTela = True
+pscreen = True
 
 def add_error(text):
     array_error.append(text)    
@@ -48,20 +48,20 @@ def text_id(data, element):
     return text_res.text
 
 def compare(value1, value2):
-    show_pass("Compare values:", imprimirTela)
+    show_pass("Compare values:", pscreen)
     if (value1 != value2):
         add_error("CRITICAL: Different values => <" + value1 + "> and <"+ value2 + ">" )
     else:
-         print_screen ("    ==>> " + value1 + " = " + value2 + " <<==", imprimirTela)
+         print_screen ("    ==>> " + value1 + " = " + value2 + " <<==", pscreen)
 
 def print_result(array_error):
     if len(array_error) > 0:
         print ""
-        print_screen ("ERROR: " + array_error[0], imprimirTela)
+        print_screen ("ERROR: " + array_error[0], pscreen)
         return [2,array_error[0]]
     else:
         print ""
-        print_screen ("  ** MONITORACAO PASSOU COM SUCESSO! **",imprimirTela)
+        print_screen ("  ** MONITORACAO PASSOU COM SUCESSO! **",pscreen)
 
 
 
