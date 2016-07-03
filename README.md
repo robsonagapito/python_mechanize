@@ -18,3 +18,6 @@ Type sudo python setup.py install
 https://pypi.python.org/pypi/PyExecJS
 PyExecJS-1.4.0.zip
 sudo python setup.py install
+
+pip install lxml
+
